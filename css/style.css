@@ -1,12 +1,12 @@
 :root{
-    --orangeLight: orange;
+    --orangeLight: #ff9c42;
     --orangeDark: #f88517;
     --grey: #33333B;
 }
 
 @font-face{
     font-family:"Bauhaus 93";
-    src: url("./css/fonts/Bauhaus93Regular.ttf");
+    src: url(./fonts/Bauhaus93Regular.ttf);
 }
 
 html, body{
@@ -205,9 +205,16 @@ nav .secondary{
 }
 
 .search .inputSearch{
-    width: 100%;
+    width: 84%;
     height: 100%;
-    border-radius: 10px;
+    border-radius:;
+}
+
+form.searchForm button{
+    float: right;
+    width: 15%;
+    height: 20px;
+    background: #2196F3;
 }
 
 /* SEARCH BAR */
@@ -233,6 +240,7 @@ nav a{
 
 /* VERTICAL NAV */
 
+/* BURGER MENU AND SEARCH ICON */
 
 .nav-check{
     display: none;
@@ -245,33 +253,20 @@ nav a{
     top: 72px;
     left: 30px;
 }
-/*
-.nav-check-label span,
-.nav-check-label span::before,
-.nav-check-label span::after{
-    display: block;
-    background: white;
-    height: 4px;
-    width: 2em;
-    border-radius: 5px;
-    position: relative;
+
+.search-check{
+    display: none;
 }
 
-.nav-check-label span::before,
-.nav-check-label span::after{
-    content: '';
-    position: absolute;
+.search-check-label{
+    z-index: 1;
+    display: none;
+    position:absolute;
+    top: 65px;
+    right: 30px;
 }
 
-.nav-check-label span::before{
-    bottom: 7px;
-}
-
-.nav-check-label span::after{
-    top: 7px;
-}
-
-*/
+/* BURGER MENU AND SEARCH ICON */
 
 /* VERTICAL NAV */
 
@@ -294,21 +289,22 @@ nav a{
 
 @media only screen and (max-width: 1000px) {
     
-    .container{
-        display: grid;
-        grid-column: 120px 120px 70px 200px;
-    }
     
     nav{
         height: 200px;
     }
     
-    .nav-check-label{
-        display: block;
-    }
+
     
     nav ul{
         transform: scale(0,1);
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    nav ul li{
+        padding: 0px;
+        margin: 0px;
     }
     
     .logo{
@@ -320,11 +316,31 @@ nav a{
     }
     
     .search{
-        grid-column: 12 / 14;
+        display: none;
+    }
+    
+    .search-check-label{
+        display: block;
+    }
+    
+    .search-check:checked ~ nav .search{
+        display: block;
+        grid-column: 3 / 12;
         grid-row: 1 / 3;
         align-self: center;
-        margin-right: 10px;
-        height: 50px;
+        height: 50%;
+        z-index: 2;       
+    }
+    
+    .search-check:checked ~ nav .search .inputSearch{
+        font-size: 30px;
+    }
+    
+    
+    /* NAV CHECK AND SEARCH CHECK */
+    
+    .nav-check-label{
+        display: block;
     }
        
     .nav-check:checked ~ nav{
@@ -333,7 +349,7 @@ nav a{
     }
     
     .nav-check:checked ~ nav .primary{
-        transform: scale(1,1);
+        transform: scale(1,1);      
         all: unset;
         display: block;
         position: absolute;
@@ -381,13 +397,14 @@ nav a{
     }
     
     .primary a::before{
-        height: 6px;
+        height: 8px;
+        bottom: .1em;
     }
     
     .secondary a::before{
         content:'';
         display: block;
-        height: 6px;
+        height: 8px;
         background: var(--orangeDark);
         position: relative;
         top: 2em;
@@ -409,6 +426,6 @@ nav a{
 #ff9c42 - CT Orange
 #f35d0e - dark orange
 #f88517 - vibrant orange
-#ff7003 - slightly darker vibrant orange
+#ff7003 - darker vibrant orange
 
  COLOURS */
