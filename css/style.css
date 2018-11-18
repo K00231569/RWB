@@ -21,7 +21,7 @@ html, body{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: 50px 50px 70px 700px 100px;
+    grid-template-rows: 50px 50px 5px 700px 100px;
     border: 1px solid black;
     grid-gap: 10px;
 }
@@ -299,11 +299,73 @@ nav a{
 
 /* NAV END */
 
+/* MAIN */
+
 .main{
-    background-color:aquamarine;
+    display: inherit;
     grid-column: 3 / 9;
     grid-row: 4 / 5;
+
+
 }
+
+/* TABS */
+
+.art-link{
+    display: inherit;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 50px 450px;
+}
+
+
+.tab{
+    display: inherit;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    grid-auto-flow: column;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button{
+    background-color: var(--grey);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.tab button:hover {
+    color: var(--orangeLight);
+}
+
+.tab button.active{
+    background-color: var(--orangeLight);
+    color: var(--grey);
+}
+
+.tabcontent {
+    color: white;
+    background-color: aqua;
+    display: inherit;
+    grid-row: 2 / 4;
+    grid-column: 1 / -1;
+
+}
+
+#Featured {
+    background-color: aqua;
+}
+
+#Latest {
+    background-color: red;
+}
+
+/* TABS */
+
+/* MAIN */
 
 .side{
     background-color:beige;
@@ -354,7 +416,7 @@ nav a{
     }
 
     
-    /* NAV CHECK */
+    /* NAV-CHECK */
     
     .nav-check-label{
         display: block;
@@ -413,7 +475,9 @@ nav a{
         display:inline;
     }
 
-    /* NAV CHECK */
+    /* NAV-CHECK */
+    
+    /* UNDERSCORE FOR MOBILE */
     
     .primary a::before{
         height: 8px;
@@ -436,6 +500,8 @@ nav a{
     .secondary a:hover::before{
         transform: scale(1, 1);
     }
+    
+    /* UNDERSCORE FOR MOBILE */
     
     /* SEARCH BAR */
     

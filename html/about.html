@@ -8,7 +8,9 @@
         <div class="container">
             <div class="header">
                 <input type="checkbox" id="nav-check" class="nav-check">
-                <label for="nav-check" class="nav-check-label"><img src="../img/burger3.png" alt="burger menu" height="60" width="80"></label>
+                <label for="nav-check" class="nav-check-label">
+                    <img src="../img/burger3.png" alt="burger menu" height="60" width="80">
+                </label>
                 
                 <nav>
                     <div class="search-div">
@@ -31,9 +33,27 @@
                     </ul>
                 </nav>
             </div>
-            <div class="main"></div>
+            <div class="main">
+                <div class="art-link">
+                    <div class="tab">   
+                        <button class="tablinks" onclick="openTab(event, 'Featured')" id="defaultOpen">Featured</button>
+                        <button class="tablinks" onclick="openTab(event, 'Latest')">Latest</button>
+                    </div> 
+                    <div id="Featured" class="tabcontent">
+                        <h1>Article Title</h1>
+                        <p>Article summary</p>
+                    </div>
+                    <div id="Latest" class="tabcontent">
+                        <h1>Article Title</h1>
+                        <p>Article summary</p>
+                    </div>
+                    <script src="../js/tab.js"></script>
+                </div>
+            </div>    
             <div class="side"></div>
             <div class="footer"></div>
         </div>
+        
+
     </body>
 </html>

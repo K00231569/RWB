@@ -31,9 +31,29 @@
                     </ul>
                 </nav>
             </div>
-            <div class="main"></div>
+            <div class="main">
+                <div class="art-link">
+                <div class="tab">   
+                <button class="tablinks" onclick="openTab(event, 'Featured')" id="defaultOpen">Featured</button>
+                <button class="tablinks" onclick="openTab(event, 'Latest')">Latest</button>
+                </div> 
+                <div id="Featured" class="tabcontent">
+                    <h1>Article Title</h1>
+                    <p>Article summary</p>
+                </div>
+                
+                <div id="Latest" class="tabcontent">
+                    <h1>Article Title</h1>
+                    <p>Article summary</p>
+                </div>
+                <script src="../js/tab.js"></script>
+ 
+                </div>
+            </div>    
             <div class="side"></div>
             <div class="footer"></div>
         </div>
+        
+
     </body>
 </html>
