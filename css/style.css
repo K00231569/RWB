@@ -1,8 +1,10 @@
 :root{
     --orangeLight: #ff9c42;
     --orangeDark: #f88517;
+    --yellow: #f9ca00;
     --grey: #33333B;
     --lightGrey: #2f323e;
+    --grey2: #333745;
     --background: #ececec;
 }
 
@@ -29,6 +31,15 @@ html, body{
 img{
     width: 100%;
     height: auto;
+}
+
+p{
+    color: var(--grey2);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0px;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
 }
 
 /* NAV START */
@@ -293,9 +304,7 @@ nav a{
 .nav-check-label{
     z-index: 1;
     display: none;
-    position: absolute;
-    top: 32px;
-    left: 40px;
+
 }
 
 /* BURGER MENU */
@@ -396,14 +405,36 @@ nav a{
     grid-row: 2 / 3;
 }
 
-p{
-    color: black;
-    padding: 20px;
-    padding-top: 0px;
-    font-size: 1.3em;
+article{
+    background-color: white;
 }
 
+article h1{
+    padding-left: 40px;
+    color: var(--orangeLight);
+    font-size: 2.5rem;
+}
 
+article a{
+    color: orange;
+    text-decoration: none;
+}
+
+article a:hover{
+    color: var(--orangeDark);
+}
+
+article ul{
+    font-size: 1.3rem;
+    color: var(--grey2);
+    padding-left: 80px;
+    padding-right: 40px;
+    line-height: 2rem;
+}
+
+.author{
+    font-style: oblique;
+}
 
 /* MAIN */
 
@@ -451,8 +482,6 @@ p{
     grid-row: 1 / 3;
 }
 
-
-
 .side-link-div p{
     padding-top: 0;
     padding-left: 5%;
@@ -483,7 +512,7 @@ p{
     grid-row: 5 / 6;
 }
 
-@media only screen and (max-width: 1600px){
+@media only screen and (max-width: 1800px){
     .main{
         grid-column: 2 / 9;
     }
@@ -503,7 +532,11 @@ p{
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
+    
+    .container{
+        grid-template-rows: 50px 50px 100px auto 100px;
+    }
         
     nav{
         height: 200px;
@@ -534,6 +567,11 @@ p{
     
     .nav-check-label{
         display: block;
+        position: absolute;
+        width: 8%;
+        height: auto;
+        left: 40px;
+        top: 35px;
     }
        
     .nav-check:checked ~ nav{
@@ -646,6 +684,48 @@ p{
     
 }
 
+@media only screen and (max-width: 600px){
+    .container{
+        grid-template-rows: 50px 50px 100px auto auto 100px;
+        grid-auto-rows: 1fr;
+    }
+    
+    .main{
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;   
+    }
+    
+    .art-link{
+        grid-template-rows: 70px 550px auto;
+    }    
+    
+    .tab{
+        grid-column: 1 / -1;
+    }
+    
+    .side{
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        margin-top: 30px;
+    }
+    
+    .side-art-link{
+        grid-template-rows: 70px;
+    }
+    
+    .tab-side{
+        grid-column: 1 / -1;
+    }
+    
+    .tab-side button{
+        font-size: 2em;
+    }
+    
+    .footer{
+        grid-row: 6 / 7;
+    }
+}
+
 
 /* COLOURS 
 
@@ -653,6 +733,8 @@ p{
 #f35d0e - dark orange
 #f88517 - vibrant orange
 #ff7003 - darker vibrant orange
+#f9ca00 - yellow (links in articles)
+#333745 - grey
 #2f323e - light grey
 #33333B - dark grey
 #ececec - background
