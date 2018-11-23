@@ -367,9 +367,6 @@ nav a{
 
 }
 
-#Featured {
-}
-
 #Latest {
     grid-row: 2 / -1;
 }
@@ -407,6 +404,7 @@ nav a{
 
 article{
     background-color: white;
+    grid-column: 1 / -1;
 }
 
 article h1{
@@ -434,6 +432,54 @@ article ul{
 
 .author{
     font-style: oblique;
+}
+
+article .img1{
+    width: 70%;
+    height: 90%;
+    position: relative;
+    left: 15%;
+}
+
+.form-div{
+    grid-column: 5 / -1;
+    grid-row: 2 / 3;
+}
+
+.login-form{
+    border: 3px solid #f1f1f1;
+    height: 100%;
+}
+
+.login{
+    position: relative;
+    width: 100%;
+    border-radius: 3px;
+    padding: 12px 20px;
+    margin: 8px 0;
+
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: white;
+}
+.login-button{
+        background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-check{
+    width: 20px;
+    display: inline-block;
+}
+
+.psw{
+    position: relative;
+    left: 25%;
 }
 
 /* MAIN */

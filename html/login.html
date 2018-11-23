@@ -35,21 +35,28 @@
             </div>
             <div class="main">
                 <div class="art-link">
-                <div class="tab">   
-                <button class="tablinks" onclick="openTab(event, 'Featured')" id="defaultOpen">Featured</button>
-                <button class="tablinks" onclick="openTab(event, 'Latest')">Latest</button>
-                </div> 
-                <div id="Featured" class="tabcontent">
-                    <h1>Article Title</h1>
-                    <p>Article summary</p>
-                </div>
-                
-                <div id="Latest" class="tabcontent">
-                    <h1>Article Title</h1>
-                    <p>Article summary</p>
-                </div>
-                <script src="../js/tab.js"></script>
- 
+                    <div class="form-div">
+                        <form class="login-form" action="">
+
+                            <div class="login-container">
+                                <label for="uname"><b>Username</b></label>
+                                <input class="login" type="text" placeholder="Enter Username" name="uname" required>
+
+                                <label for="psw"><b>Password</b></label>
+                                <input class="login" type="password" placeholder="Enter Password" name="psw" required>
+
+                                <button class="login-button" type="submit">Login</button>
+                                <label>
+                                    <input class="login-check" type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+
+                            <div class="login-container" style="background-color:#f1f1f1">
+                                <button type="button" class="cancelbtn">Cancel</button>
+                                <span class="psw"><a href="#">Forgot password?</a></span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>    
             <div class="side"></div>
