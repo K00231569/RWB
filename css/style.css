@@ -24,7 +24,7 @@ html, body{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: 50px 50px 5px auto 100px;
+    grid-template-rows: 50px 50px 5px auto 130px;
     grid-gap: 10px;
 }
 
@@ -96,7 +96,7 @@ nav .primary{
     position: relative;
 }
 
-.a:active{
+.primary a:active{
     background-color: var(--grey);
 }
 
@@ -195,7 +195,7 @@ nav .secondary{
 }
 
 .secondary a{
-    background-color: orange;
+    background-color: var(--orangeLight);
     color: white;
     padding: 7px;
     padding-left: 20px;
@@ -208,7 +208,7 @@ nav .secondary{
 }
 
 .secondary a:hover, a:active{
-    background-color: var(--grey);
+    background-color: var(--orangeDark);
 }
 
 /* LOG IN & REGISTER */
@@ -334,7 +334,7 @@ nav a{
 
 .tab{
     display: inherit;
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     grid-row: 1 / 2;
     grid-auto-flow: column;
     overflow: hidden;
@@ -379,6 +379,8 @@ nav a{
 
 /* TABS */
 
+/* MAIN COLUMN ARTICLE LINK */
+
 .feature-div{
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -401,6 +403,14 @@ nav a{
     grid-column: 1 / 9;
     grid-row: 2 / 3;
 }
+
+.link-overlay h1{
+    font-size: 2.3em;
+}
+
+/* MAIN COLUMN ARTICLE LINK */
+
+/* ARTICLES */
 
 article{
     background-color: white;
@@ -441,14 +451,91 @@ article .img1{
     left: 15%;
 }
 
+.art-btn1{
+    padding: 15px;
+    background-color: var(--orangeLight);
+    border: none;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.art-btn2{
+    padding: 15px;
+    background-color: var(--orangeLight);
+    border: none;
+    color: white;
+}
+
+.art-btn1:hover, .art-btn2:hover{
+    background-color: var(--orangeDark);
+}
+
+.article-form{
+    padding-top: 20px;
+    grid-column: 1 / 9;
+    background-color: white;
+}
+
+.article-form label{
+    padding-left: 5%;
+}
+
+.article-form input{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    color: black;
+}
+
+.article-textarea{
+    width: 90%;
+    height: 700px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* ARTICLES */
+
+/* LOG IN & REGISTER FORM */
+
 .form-div{
-    grid-column: 5 / -1;
-    grid-row: 2 / 3;
+    grid-column: 4 / 11;
+    grid-row: 4 / 5;
+    height: 70%;
+}
+
+.profile-div{
+    grid-column: 4 / 11;
+    grid-row: 4 / 5;
+    height: 90%;
+}
+
+.img-div{
+    text-align: center;
+}
+
+.profile-pic{
+    width: 50%;
 }
 
 .login-form{
-    border: 3px solid #f1f1f1;
+    border: 2px solid var(--grey);
     height: 100%;
+    padding: 30px;
+    background-color: white;
+}
+
+.login-container-top{
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+}
+
+.login-container-bottom{
+    grid-column: 1 / -1;
+    grid-row: 3 / 5;
 }
 
 .login{
@@ -456,14 +543,14 @@ article .img1{
     width: 100%;
     border-radius: 3px;
     padding: 12px 20px;
-    margin: 8px 0;
-
+    margin-top: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     background-color: white;
 }
 .login-button{
-        background-color: #4CAF50;
+    background-color: var(--orangeLight);
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -472,15 +559,46 @@ article .img1{
     width: 100%;
 }
 
+.password{
+    position: relative;
+    display: block;
+    text-align: center;
+    top: 60px;
+}
+
+.login-check-div{
+    display: block;
+    width: 200px;
+}
+
 .login-check{
-    width: 20px;
+    display: inline-block;
+    width: 15px;
+    margin-top: 20px;
+}
+
+.login-check-label{
     display: inline-block;
 }
 
-.psw{
+.reg{
     position: relative;
-    left: 25%;
+    top: 80px;
+    display: block;
+    text-align: center;
 }
+
+.cancelbutton{
+    position: relative;
+    float: right;
+    padding: 10px;
+    background-color: var(--grey2);
+    color: white;
+    border: none;
+    margin-right: 5px;
+}
+
+/* LOG IN & REGISTER FORM */
 
 /* MAIN */
 
@@ -516,7 +634,7 @@ article .img1{
 
 .side-link-div h1{
     padding-left: 5%;
-    font-size: 2.5vh;
+    font-size: 2em;
 }
 
 .side-link-div a{
@@ -532,7 +650,7 @@ article .img1{
     padding-top: 0;
     padding-left: 5%;
     padding-right: 5%;
-    font-size: 1.5vh;
+    font-size: 1.1em;
     margin: 0;
 }
 
@@ -558,6 +676,14 @@ article .img1{
     grid-row: 5 / 6;
 }
 
+.footer p{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
 @media only screen and (max-width: 1800px){
     .main{
         grid-column: 2 / 9;
@@ -566,6 +692,18 @@ article .img1{
     .side{
         grid-column: 9 / 13;
     }
+    
+    .form-div{
+        grid-column: 3 / 12;
+        grid-row: 4 / 5;
+        height: 70%;
+}
+
+    .profile-div{
+        grid-column: 3 / 12;
+        grid-row: 4 / 5;
+        height: 90%;
+}
 }
 
 @media only screen and (max-width: 1200px){
@@ -576,7 +714,29 @@ article .img1{
     .side{
         grid-column: 9 / 14;
     }
+    
+        .form-div{
+        grid-column: 2 / 13;
+        grid-row: 4 / 5;
+        height: 70%;
+    }
+
+    .profile-div{
+        grid-column: 2 / 13;
+        grid-row: 4 / 5;
+        height: 90%;
+    }
+    
+    .tab{
+        grid-column: 1 / -1;
+    }
+    
+    .tab-side{
+        grid-column: 1 / -1;
+    }
 }
+
+/* 900px navigation changes to mobile */
 
 @media only screen and (max-width: 900px) {
     
@@ -606,6 +766,18 @@ article .img1{
     
     .logo_a{
         font-size: 8vw;
+    }
+    
+    .form-div{
+        grid-column: 1 / 14;
+        grid-row: 4 / 5;
+        height: 70%;
+    }
+
+    .profile-div{
+        grid-column: 1 / 14;
+        grid-row: 4 / 5;
+        height: 90%;
     }
 
     

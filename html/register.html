@@ -24,18 +24,44 @@
                         <li><a href="cpu.html"><span class="word">CPUs<span class="plus">+</span></span></a></li>
                         <li><a href="./gpu.html"><span class="word">GPUs<span class="plus">+</span></span></a></li>
                         <li><a href="motherboard.html"><span class="word">MOTHERBOARDs<span class="plus">+</span></span></a></li>
-                        <li><a href="./ram.html"><span class="word">RAM<span class="plus">+</span></span></a></li>
-                        <li><a href="about.html"><span class="word">ABOUT<span class="plus">+</span></span></a></li>                        
+                        <li><a href="./ram.html"><span class="word">RAM<span class="plus">+</span></span></a></li>                        
                     </ul>
                     <ul class="secondary">
                         <li><a href="login.html"><span class="word2">Log In<span class="plus2">+</span></span></a></li>
-                        <li><a href="register.html"><span class="word2">Register<span class="plus2">+</span></span></a></li>
+                        <li><a href="profile.html"><span class="word2">Profile<span class="plus2">+</span></span></a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="main"></div>
-            <div class="side"></div>
-            <div class="footer"></div>
+            
+            <div class="form-div">
+                <form class="login-form" action="">
+                    <div class="login-container-top">
+                        <label for="email"><b>Email</b></label>
+                        <input class="login" type="text" placeholder="Enter email" name="email" required>
+                        <label for="uname"><b>Username</b></label>
+                        <input class="login" type="text" placeholder="Enter Username" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input class="login" type="password" placeholder="Enter Password" name="psw" required>
+                        <label for="psw"><b>Confirm Password</b></label>
+                        <input class="login" type="password" placeholder="Enter Password" name="psw" required>
+                        <button class="login-button" type="submit">Register</button>            
+                    </div>
+
+                    <div class="login-container-bottom">
+                        <div class="login-check-div">
+                            <input class="login-check" type="checkbox" checked="checked" name="remember" id="login-check">
+                            <label for="login-check" class="login-check-label">Remember me</label>
+                        </div>    
+                        <button type="button" class="cancelbutton">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <p style="padding-top:15px">Marek Czerniejewski</p>
+                <p>K00231569</p>
+                <p>Responsive Web Design Project</p>
+            </div>
         </div>
     </body>
 </html>

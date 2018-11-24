@@ -24,12 +24,11 @@
                         <li><a href="cpu.html"><span class="word">CPUs<span class="plus">+</span></span></a></li>
                         <li><a href="./gpu.html"><span class="word">GPUs<span class="plus">+</span></span></a></li>
                         <li><a href="motherboard.html"><span class="word">MOTHERBOARDs<span class="plus">+</span></span></a></li>
-                        <li><a href="./ram.html"><span class="word">RAM<span class="plus">+</span></span></a></li>
-                        <li><a href="about.html"><span class="word">ABOUT<span class="plus">+</span></span></a></li>                        
+                        <li><a href="./ram.html"><span class="word">RAM<span class="plus">+</span></span></a></li>                     
                     </ul>
                     <ul class="secondary">
                         <li><a href="login.html"><span class="word2">Log In<span class="plus2">+</span></span></a></li>
-                        <li><a href="register.html"><span class="word2">Register<span class="plus2">+</span></span></a></li>
+                        <li><a href="profile.html"><span class="word2">Profile<span class="plus2">+</span></span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -38,6 +37,7 @@
                 <div class="tab">   
                 <button class="tablinks" onclick="openTab(event, 'Featured')" id="defaultOpen">Featured</button>
                 <button class="tablinks" onclick="openTab(event, 'Latest')">Latest</button>
+                <button class="tablinks" onclick="openTab(event, 'Article')">Create Article</button>
                 </div> 
                 <div id="Featured" class="tabcontent">
                     <a href="article5.html">
@@ -61,6 +61,21 @@
                         </div>
                     </div>
                     </a>
+                </div>
+                <div id="Article" class="tabcontent">
+                <div class="feature-div">
+                    <form class="article-form" action="">
+                        <label for="uname"><b>Article Title</b></label>
+                        <input class="login" type="text" placeholder="Title" name="uname">
+                        <label for="psw"><b>Image Path</b></label>
+                        <input class="login" type="text" placeholder="C:\users...." name="psw">
+                        <label for="uname"><b>Article Author</b></label>
+                        <input class="login" type="text" placeholder="Author name" name="uname">
+                        <label for="psw"><b>Article Text</b></label>
+                        <textarea class="article-textarea" placeholder="Article body goes here..."></textarea>
+                        <button class="art-btn1">Publish</button>
+                    </form>
+                </div>
                 </div>
                 <script src="../js/tab.js"></script>
  
@@ -126,7 +141,11 @@
                     </div>
                 </div>
             </div>
-            <div class="footer"></div>
+            <div class="footer">
+                <p style="padding-top:15px">Marek Czerniejewski</p>
+                <p>K00231569</p>
+                <p>Responsive Web Design Project</p>
+            </div>
         </div>
         
 
